@@ -19,19 +19,21 @@
 
    ```bash
    npm install
-   ng service --open
+   ng serve --open
    ```
 2. Server
-    - ```cd .\src\server\```
-    - npm i
-    - Modify docker-compose.yml so that uri points to your MongoDB Server connection string.
+    ```bash
+        cd .\src\server\
+        npm i
+        Modify docker-compose.yml so that uri points to your MongoDB Server connection string.
+                uri: mongodb://prisma:prisma@your.mongodb.server.ip
+        docker-compose up -d
+        prisma deploy
+        node .\prisma\seed.js
+        node .\server.js
+   ```
     
-        ```uri: mongodb://prisma:prisma@your.mongodb.server.ip```
-    - Run ```docker-compose up -d```
-    - Run ```prisma deploy```
-    - Run ```node .\prisma\seed.js```
-    - Run ```node .\server.js```
-
+3. Go to localhost:4200
 
 ## Technologies
 - https://www.npmjs.com/package/mongodb
