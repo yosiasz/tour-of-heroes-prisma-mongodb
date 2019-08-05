@@ -22,7 +22,7 @@
    ng service --open
    ```
 2. Server
-    - ```cd .\src\server\``
+    - ```cd .\src\server\```
     - npm i
     - Modify docker-compose.yml so that uri points to your MongoDB Server connection string.
         uri: mongodb://prisma:prisma@your.mongodb.server.ip
