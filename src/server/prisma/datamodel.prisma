@@ -1,0 +1,4 @@
+type Heroe {
+  id: ID! @id
+  name: String!
+}
