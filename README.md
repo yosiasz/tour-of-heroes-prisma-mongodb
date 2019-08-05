@@ -25,7 +25,8 @@
     - ```cd .\src\server\```
     - npm i
     - Modify docker-compose.yml so that uri points to your MongoDB Server connection string.
-        uri: mongodb://prisma:prisma@your.mongodb.server.ip
+    
+        ```uri: mongodb://prisma:prisma@your.mongodb.server.ip```
     - Run ```docker-compose up -d```
     - Run ```prisma deploy```
     - Run ```node .\prisma\seed.js```
