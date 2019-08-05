@@ -23,9 +23,8 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params
-  const post = await prisma.updateHero({
-    where: { id }
-  })
+  const { name } = req.body;
+  const post = await prisma.updateHeroe({data: {name}, where: { id } })
   res.json(post)
 })
 
