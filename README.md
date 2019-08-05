@@ -1,5 +1,9 @@
 # Tour of heroes using Prisma API
 
+
+## Setting up your MongoDb
+1. Make sure you have a running MongoDb Server  
+
 ## Getting Started
 
 1. Clone this repository
@@ -9,18 +13,24 @@
    cd tour-of-heroes-prisma
    ```
 
-1. Install the npm packages
+
+1. Client:
+    Install the npm packages
 
    ```bash
    npm install
+   ng service --open
    ```
+2. Server
+    - ```cd .\src\server\``
+    - npm i
+    - Modify docker-compose.yml so that uri points to your MongoDB Server connection string.
+        uri: mongodb://prisma:prisma@your.mongodb.server.ip
+    - Run ```docker-compose up -d```
+    - Run ```prisma deploy```
+    - Run ```node .\prisma\seed.js```
+    - Run ```node .\server.js```
 
-## MongoDb
-1. Change your mongodb.js config to point to your MongoDb Server
-   Here we will a SQL Account
-2. Create a database named **heroes**
-3. Create a collection named **heroes**
-4. Add some data
 
 ## Technologies
 - https://www.npmjs.com/package/mongodb
